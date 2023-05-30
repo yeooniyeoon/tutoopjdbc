@@ -5,6 +5,25 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TutoopjdbcApplication {
     public static void main(String[] args) {
+//        printcheckLeapYear();
+
+        game369();
+    }
+
+    private static void game369() {
+        for (int cnt = 0; cnt < 100; cnt++) {
+            System.out.print(cnt + "");
+            int a = cnt / 10;
+            int b = cnt % 10;
+            if (a % 3 == 0 && a != 0)
+                System.out.print("*");
+            if (b % 3 == 0 && b != 0)
+                System.out.print("*");
+            System.out.println();
+        }
+    }
+
+    public static void printcheckLeapYear(String[] args) {
         int i = 1700;
         if (checkLeapYear(i))
             System.out.println(i + " O");
