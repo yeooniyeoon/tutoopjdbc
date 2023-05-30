@@ -17,4 +17,13 @@ class TutoopjdbcApplicationTest {
         assertEquals(false, TutoopjdbcApplication.isLeapYear(1900));
         assertEquals(true, TutoopjdbcApplication.isLeapYear(2400));
     }
+
+    @Test
+    void testis369() {
+        assertEquals("*", TutoopjdbcApplication.is369(3));
+        assertEquals("", TutoopjdbcApplication.is369(15));
+        assertEquals("**", TutoopjdbcApplication.is369(33));
+        assertEquals("***", TutoopjdbcApplication.is369(333));
+        assertEquals("****", TutoopjdbcApplication.is369(3369));
+    }
 }
